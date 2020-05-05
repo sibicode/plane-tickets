@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
+import { SearchIdContext, TicketsContext } from './context';
+import { GlobalStyle } from './assets/styled';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalStyle />
+    <SearchIdContext.Provider>
+      <TicketsContext.Provider>
+        <App />
+      </TicketsContext.Provider>
+    </SearchIdContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

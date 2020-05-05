@@ -1,0 +1,1 @@
+export type FiltersTypes = { [key: string]: string }
